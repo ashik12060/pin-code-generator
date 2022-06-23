@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 *{
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body {
-    background: #10101B;
+    background: #0c0c0c;
     height: 100vh;
 }
 .container {
     margin-top: 30px;
 }
-
+.pin-generator{
+    text-align: center;
+    color:white;
+}
+.hr-c{
+    border:1px solid white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .half-width {
     height: 570px;
-    background: #222436;
+    background: #1c235c;
     padding: 30px;
     text-align: center;
 }
@@ -33,7 +46,7 @@ body {
 }
 
 input[type='text']{
-    background-color: #3D4153;
+    background-color: #474952;
     padding: 10px 0px;
     color: #ffffff;
     width: 80%;
@@ -64,7 +77,7 @@ width: 100%;
 
 .button {
 width: 20%;
-background: #425062;
+background: #2d3a4b;
 color: #fff;
 padding: 20px 0;
 margin: 5px;
@@ -95,6 +108,7 @@ color: #E0B612;
     margin-top: 20px;
     border-radius: 15px;
     padding: 5px 20px;
+    display:none;
 }
 .notify-section{
     width: 35%;

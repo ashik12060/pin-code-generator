@@ -5,7 +5,7 @@ function getPin(){
         return pin;
     }
     else{
-        console.log('3 pic activate', pin);
+        
         return getPin();
     }
 
@@ -13,5 +13,47 @@ function getPin(){
 
 function generatePin(){
     const pin = getPin();
-    console.log(pin)
+    document.getElementById('display-pin').value = pin;
 }
+
+//keypad
+
+document.getElementById('key-pad').addEventListener('click', function(event){
+    const number = event.target.innerText;
+    const calcInput = document.getElementById('typed-numbers');
+
+   if(isNaN(number)){
+    if(number == 'C'){
+        calcInput.value = '';
+
+    }
+   }
+
+   else{
+    const previousNumber = calcInput.value;
+    const newNumber = previousNumber + number;
+    calcInput.value = newNumber;
+   }
+
+})
+
+
+//submit button varify
+
+function verifyPin(){
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const notifySuccess = document.getElementById('notify-success');
+    const notifyError = document.getElementById('notify-error');
+
+    if(pin == typedNumbers){
+        notifySuccess.style.display="block";
+        notifyError.style.display="none";
+    }
+    
+    else{
+        notifySuccess.style.display="none";
+        notifyError.style.display="block";
+    }
+}
+
